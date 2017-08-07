@@ -1,0 +1,20 @@
+---
+layout: default
+title: Kapor Capital's Investments
+---
+<h2>Kapor Capital' (Education) Investments</h2>
+
+<!-- Organizations -->
+{% assign investments = site.data.investments %}
+{% assign investments = investments | sort:"Name" %}
+
+<!-- Document -->
+
+{% for investment in investments %}
+
+<ul>
+<li><strong>{{ investment.Name }}</strong> ({{ investment.Date }})</li>
+</ul>
+
+{% endfor %}
+
